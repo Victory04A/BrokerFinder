@@ -8,10 +8,11 @@ const requests = [
 
 function Request() {
     return (
-        <div>
+        <div className="page">
             <h1>Service Requests</h1>
 
-            <table>
+            <div className="table-wrap">
+                <table>
                 <thead>
                     <tr>
                         <th>Client</th>
@@ -29,8 +30,9 @@ function Request() {
                     ))}
                 </tbody>
             </table>
+            </div>
 
-            <Link to="/admin">Back to Dashboard</Link>
+            <Link to="/admin" className="btn back">Back to Dashboard</Link>
         </div>
     );
 }

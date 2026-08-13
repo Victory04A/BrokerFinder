@@ -8,20 +8,20 @@ const requests = [
 
 function MyRequest() {
     return (
-        <div>
+        <div className="page">
             <h1>My Requests</h1>
 
-            <div>
+            <div className="request-list">
                 {requests.map((request) => (
-                    <div key={request.id}>
-                        <h3>{request.title}</h3>
+                    <div className="request-card" key={request.id}>
+                        <h3 className="request-card__title">{request.title}</h3>
                         <p>Client: {request.client}</p>
-                        <p>Status: {request.status}</p>
+                        <span className={"status status--" + request.status.toLowerCase()}>{request.status}</span>
                     </div>
                 ))}
             </div>
 
-            <Link to="/broker">Back to Dashboard</Link>
+            <Link to="/broker" className="btn back">Back to Dashboard</Link>
         </div>
     );
 }

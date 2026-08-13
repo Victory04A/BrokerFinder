@@ -4,10 +4,10 @@ import { brokers, locations, specialties } from "../data/brokers";
 
 function RequestService() {
     return (
-        <div>
+        <div className="page">
             <h1>Request a Service</h1>
 
-            <form>
+            <form className="form-card">
                 <select>
                     <option>Select Broker</option>
                     {brokers.map((broker) => (
@@ -33,10 +33,10 @@ function RequestService() {
 
                 <textarea placeholder="Describe your request" />
 
-                <button type="submit">Submit Request</button>
+                <button className="btn primary" type="submit">Submit Request</button>
             </form>
 
-            <Link to="/">Back to Home</Link>
+            <Link to="/" className="btn back">Back to Home</Link>
         </div>
     );
 }

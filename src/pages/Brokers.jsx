@@ -6,12 +6,12 @@ import { brokers } from "../data/brokers";
 
 function Brokers() {
     return (
-        <div>
+        <div className="page">
             <h1>Find a Broker</h1>
 
             <SearchForm />
 
-            <div>
+            <div className="broker-grid">
                 {brokers.map((broker) => (
                     
                     <BrokerCard
@@ -23,10 +23,12 @@ function Brokers() {
                     />
                 ))}
             </div>
-            <Link to="/brokers/1">John mwita</Link>
-            <Link to="/brokers/2">Asha Hassan</Link>
-            <Link to="/brokers/3">peter Juma</Link>
-            <Link to="/">Back to Home</Link>
+            <div className="quick-links">
+                <Link to="/brokers/1">John mwita</Link>
+                <Link to="/brokers/2">Asha Hassan</Link>
+                <Link to="/brokers/3">peter Juma</Link>
+            </div>
+            <Link to="/" className="btn back">Back to Home</Link>
         </div>
     );
 }

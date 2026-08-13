@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
     return (
-        <aside>
-            <nav>
+        <aside className="sidebar">
+            <nav className="sidebar__nav">
                 <Link to="/admin">Dashboard</Link>
                 <Link to="/admin/brokers">Brokers</Link>
                 <Link to="/admin/users">Users</Link>

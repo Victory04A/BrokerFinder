@@ -1,6 +1,6 @@
 function SearchForm() {
     return (
-        <form>
+        <form className="search-form">
             <select>
                 <option>Select Location</option>
                 <option>Dar es salaam</option>
@@ -21,7 +21,7 @@ function SearchForm() {
                 <option>Marketing</option>
             </select>
 
-            <button type="submit">Search</button>
+            <button className="btn primary" type="submit">Search</button>
         </form>
     );
 }

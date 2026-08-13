@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 
 function MainLayout() {
     return (
-        <div>
+        <div className="layout">
             <Navbar />
-            <main>
+            <main className="layout__main">
                 <Outlet />
             </main>
             <Footer />

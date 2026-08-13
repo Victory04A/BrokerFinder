@@ -5,12 +5,14 @@ import { brokers } from "../../data/brokers";
 
 function ManageBrokers() {
     return (
-        <div>
+        <div className="page">
             <h1>Manage Brokers</h1>
 
-            <BrokerTable brokers={brokers} />
+            <div className="table-wrap">
+                <BrokerTable brokers={brokers} />
+            </div>
 
-            <Link to="/admin">Back to Dashboard</Link>
+            <Link to="/admin" className="btn back">Back to Dashboard</Link>
         </div>
     );
 }

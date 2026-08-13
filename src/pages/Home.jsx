@@ -7,7 +7,7 @@ import { brokers } from "../data/brokers";
 
 function Home() {
     return (
-        <div>
+        <div className="page">
             <Hero
                 name="Welcome"
                 title="Broker Finder"
@@ -16,7 +16,7 @@ function Home() {
 
             <SearchBar />
 
-            <div>
+            <div className="broker-grid">
                 {brokers.slice(0, 3).map((broker) => (
                     <BrokerCard
                         key={broker.id}
@@ -28,7 +28,7 @@ function Home() {
                 ))}
             </div>
 
-            <Link to="/brokers">View All Brokers</Link>
+            <Link to="/brokers" className="btn outline">View All Brokers</Link>
         </div>
     );
 }

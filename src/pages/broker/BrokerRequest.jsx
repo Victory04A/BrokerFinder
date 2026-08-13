@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 
 function BrokerRequest() {
     return (
-        <div>
+        <div className="page">
             <h1>Create a Request</h1>
 
-            <form>
+            <form className="form-card">
                 <input type="text" placeholder="Request Title" />
                 <textarea placeholder="Describe the service you offer" />
                 <input type="text" placeholder="Location" />
                 <input type="text" placeholder="Specialty" />
-                <button type="submit">Submit</button>
+                <button className="btn primary" type="submit">Submit</button>
             </form>
 
-            <Link to="/broker">Back to Dashboard</Link>
+            <Link to="/broker" className="btn back">Back to Dashboard</Link>
         </div>
     );
 }

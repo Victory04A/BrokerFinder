@@ -4,17 +4,17 @@ import SearchForm from "../../components/SearchForm";
 
 function ClientDashboard() {
     return (
-        <div>
+        <div className="page">
             <h1>Client Dashboard</h1>
 
-            <p>Find a broker and request a service below.</p>
+            <p className="page__lead">Find a broker and request a service below.</p>
 
             <SearchForm />
 
-            <div>
-                <Link to="/brokers">Browse Brokers</Link>
-                <Link to="/client/requests">My Requests</Link>
-                <Link to="/client/profile">Profile</Link>
+            <div className="action-links">
+                <Link to="/brokers" className="btn outline">Browse Brokers</Link>
+                <Link to="/client/requests" className="btn outline">My Requests</Link>
+                <Link to="/client/profile" className="btn outline">Profile</Link>
             </div>
         </div>
     );

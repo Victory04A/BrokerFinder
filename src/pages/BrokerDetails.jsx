@@ -16,17 +16,19 @@ function BrokerDetails() {
     }
 
     return (
-        <div>
-            <h1>{broker.name}</h1>
-            <p>Location: {broker.location}</p>
-            <p>Specialty: {broker.specialty}</p>
-            <p>Phone: {broker.phone}</p>
-            <p>Email: {broker.email}</p>
-            <p>{broker.description}</p>
+<div className="detail-card">
+                <h1>{broker.name}</h1>
+                <p>Location: {broker.location}</p>
+                <p>Specialty: {broker.specialty}</p>
+                <p>Phone: {broker.phone}</p>
+                <p>Email: {broker.email}</p>
+                <p className="detail-card__desc">{broker.description}</p>
 
-            <Link to="/request-service">Request Service</Link>
-            <Link to="/brokers">Back to Brokers</Link>
-        </div>
+                <div className="detail-card__actions">
+                    <Link to="/request-service" className="btn primary">Request Service</Link>
+                    <Link to="/brokers" className="btn back">Back to Brokers</Link>
+                </div>
+            </div>
     );
 }
 

@@ -8,10 +8,11 @@ const users = [
 
 function ManageUsers() {
     return (
-        <div>
+        <div className="page">
             <h1>Manage Users</h1>
 
-            <table>
+            <div className="table-wrap">
+                <table>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -29,8 +30,9 @@ function ManageUsers() {
                     ))}
                 </tbody>
             </table>
+            </div>
 
-            <Link to="/admin">Back to Dashboard</Link>
+            <Link to="/admin" className="btn back">Back to Dashboard</Link>
         </div>
     );
 }

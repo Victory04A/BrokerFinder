@@ -1,12 +1,12 @@
-function BrokerCard({ id,name, location, specialty, phone }) {
+function BrokerCard({ name, location, specialty, phone }) {
   return (
-    <div>
-      <h2>{name}</h2>
-      <p>Location: {location}</p>
-      <p>Specialty: {specialty}</p>
-      <p>Phone: {phone}</p>
+    <div className="broker-card">
+      <h2 className="broker-card__name">{name}</h2>
+      <p className="broker-card__detail">Location: {location}</p>
+      <p className="broker-card__detail">Specialty: {specialty}</p>
+      <p className="broker-card__detail">Phone: {phone}</p>
 
-      <button>Contact Broker</button>
+      <button className="btn outline">Contact Broker</button>
     </div>
   );
 }

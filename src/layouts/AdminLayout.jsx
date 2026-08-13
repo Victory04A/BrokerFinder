@@ -4,9 +4,9 @@ import Sidebar from "../components/Sidebar";
 
 function AdminLayout() {
     return (
-        <div>
+        <div className="layout layout--admin">
             <Sidebar />
-            <main>
+            <main className="layout__main">
                 <Outlet />
             </main>
         </div>

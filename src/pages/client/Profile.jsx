@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 
 function Profile() {
     return (
-        <div>
+        <div className="page page--centered">
             <h1>My Profile</h1>
 
-            <form>
+            <form className="form-card">
                 <input type="text" placeholder="Full Name" />
                 <input type="email" placeholder="Email" />
                 <input type="tel" placeholder="Phone" />
                 <input type="text" placeholder="Location" />
-                <button type="submit">Save Changes</button>
+                <button className="btn primary" type="submit">Save Changes</button>
             </form>
 
-            <Link to="/client">Back to Dashboard</Link>
+            <Link to="/client" className="btn back">Back to Dashboard</Link>
         </div>
     );
 }

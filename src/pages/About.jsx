@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 
 function About() {
     return (
-        <div>
+        <div className="page">
             <h2>About BrokerFinder</h2>
 
-            <div>
+            <div className="about-card">
                 <p>
                     BrokerFinder helps clients to find the right broker
                     for their services.
                 </p>
             </div>
 
-            <Link to="/">Back to Home</Link>
+            <Link to="/" className="btn back">Back to Home</Link>
         </div>
     );
 }

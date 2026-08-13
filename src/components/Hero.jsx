@@ -1,13 +1,13 @@
 function Hero({ name, title, description }) {
   return (
-    <div>
+    <div className="hero">
       <h1>{title}</h1>
 
-      <h2>Hello {name}</h2>
+      <h2 className="hero__name">Hello {name}</h2>
 
-      <p>{description}</p>
+      <p className="hero__desc">{description}</p>
 
-      <button>Find Broker</button>
+      <button className="btn primary">Find Broker</button>
     </div>
   );
 }

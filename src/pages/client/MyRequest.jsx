@@ -7,21 +7,23 @@ const requests = [
 
 function MyRequest() {
     return (
-        <div>
+        <div className="page">
             <h1>My Requests</h1>
 
-            <div>
+            <div className="request-list">
                 {requests.map((request) => (
-                    <div key={request.id}>
-                        <h3>{request.title}</h3>
+                    <div className="request-card" key={request.id}>
+                        <h3 className="request-card__title">{request.title}</h3>
                         <p>Broker: {request.broker}</p>
-                        <p>Status: {request.status}</p>
+                        <span className={"status status--" + request.status.toLowerCase()}>{request.status}</span>
                     </div>
                 ))}
             </div>
 
-            <Link to="/request-service">New Request</Link>
-            <Link to="/client">Back to Dashboard</Link>
+            <div className="action-links">
+                <Link to="/request-service" className="btn primary">New Request</Link>
+                <Link to="/client" className="btn back">Back to Dashboard</Link>
+            </div>
         </div>
     );
 }
