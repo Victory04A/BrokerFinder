@@ -1,16 +1,58 @@
-# React + Vite
+# BrokerFinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for finding and connecting with trusted brokers in real estate, insurance, and finance.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Broker Search** – Find brokers by specialty, location, or name
+- **Top Rated Brokers** – Browse a grid of vetted, verified professionals
+- **Responsive Layout** – Header, footer, and Tailwind design system
+- **Reusable Components** – Button, Input, BrokerCard, Layout, and more
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 19](https://react.dev) with [Vite 8](https://vite.dev)
+- [React Router 7](https://reactrouter.com)
+- [Tailwind CSS 3](https://tailwindcss.com)
+- [Heroicons](https://heroicons.com)
+- [Axios](https://axios-http.com) (for future API integration)
+- [React Query](https://tanstack.com/query)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
+
+## Scripts
+
+| Script    | Description                     |
+| --------- | ------------------------------- |
+| `npm run dev`     | Start the Vite dev server     |
+| `npm run build`   | Build for production          |
+| `npm run preview` | Preview the production build  |
+| `npm run lint`    | Run ESLint                    |
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── common/        # Shared UI (Button, Input)
+│   ├── brokers/       # BrokerCard
+│   └── layout/        # Header, Footer, Layout
+├── pages/
+│   ├── Home.jsx       # Main landing page
+│   └── ...            # Additional pages
+├── layouts/           # Admin/Broker/Client layout shells
+├── data/              # Sample data
+├── App.jsx            # App entry with routing
+└── main.jsx           # React bootstrap
+```
+
+## Status
+
+Active development. Historical pages and layouts exist under `pages/` and `layouts/` but are not yet wired into the router.
